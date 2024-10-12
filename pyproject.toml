@@ -6,14 +6,13 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi[standard]>=0.115.0",
-    "opencv-python>=4.10.0.84",
     "pydantic-settings>=2.5.2",
-    "torch==2.4.1",
-    "torchvision==0.19.1",
-    "ultralytics>=8.3.10",
+    "torch==2.4.1+cpu",
+    "torchvision==0.19.1+cpu",
 ]
 
 [tool.uv]
+extra-index-url = ["https://download.pytorch.org/whl/cpu"]
 dev-dependencies = [
     "jupyter>=1.1.1",
     "lark>=1.2.2",
