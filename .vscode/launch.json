@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run local devcontainer",
+            "type": "debugpy",
+            "python": "/.venv/bin/python",
+            "request": "launch",
+            "module": "fastapi",
+            "args": ["dev", "src/main.py"],
+            "justMyCode": true,
+            "env": {
+                "LOG_LEVEL": "DEBUG"
+            }
+        },
+        {
+            "name": "Run local",
+            "type": "debugpy",
+            "python": ".venv/bin/python",
+            "request": "launch",
+            "module": "fastapi",
+            "args": ["dev", "src/main.py"],
+            "justMyCode": true,
+            "env": {
+                "LOG_LEVEL": "DEBUG"
+            }
+        }
+    ]
+}

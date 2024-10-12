@@ -97,13 +97,6 @@ def get_model_info():
     }
     return data
 
-@app.get("/greeting")
-def greet(name: str | None = None):
-    return {
-        "status": "OK",
-        "message": f"Hello, {name} how are you?"
-    }
-
 if __name__ == "__main__":
     import uvicorn
 

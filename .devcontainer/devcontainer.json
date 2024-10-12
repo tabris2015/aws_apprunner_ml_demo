@@ -1,0 +1,30 @@
+{
+	"name": "Pedestrian Service Devcontainer",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "Dockerfile"
+	},
+	// "remoteUser": "root",
+	"runArgs": [
+        "--platform=linux/amd64",
+		"--env-file", ".env",
+		"--add-host=host.docker.internal:host-gateway"
+	],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"ms-toolsai.vscode-jupyter-cell-tags",
+			"ms-toolsai.jupyter-keymap",
+			"ms-toolsai.jupyter-renderers",
+			"ms-toolsai.vscode-jupyter-slideshow",
+			"ms-python.vscode-pylance"
+		  ]
+		}
+	  }
+}
