@@ -6,9 +6,11 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi[standard]>=0.115.0",
+    "opencv-python>=4.10.0.84",
     "pydantic-settings>=2.5.2",
     "torch==2.4.1+cpu",
     "torchvision==0.19.1+cpu",
+    "ultralytics>=8.3.10",
 ]
 
 [tool.uv]
